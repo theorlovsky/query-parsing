@@ -1,0 +1,24 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/util-query-params/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/util-query-params"],
+      "options": {
+        "project": "libs/util-query-params/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/util-query-params/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/util-query-params/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    }
+  },
+  "tags": []
+}

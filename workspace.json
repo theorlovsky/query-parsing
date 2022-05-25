@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "query-parsing": "apps/query-parsing"
+    "query-parsing": "apps/query-parsing",
+    "util-query-params": "libs/util-query-params"
   }
 }

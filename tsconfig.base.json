@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@app/util-query-params": ["libs/util-query-params/src/index.ts"]
+      "@app/feature-example": ["libs/feature-example/src/index.ts"],
+      "@app/state-example": ["libs/state-example/src/index.ts"],
+      "@app/util-query-params": ["libs/util-query-params/src/index.ts"],
+      "@app/util-types": ["libs/util-types/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

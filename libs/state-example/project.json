@@ -1,0 +1,24 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/state-example/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/state-example"],
+      "options": {
+        "project": "libs/state-example/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/state-example/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/state-example/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    }
+  },
+  "tags": []
+}

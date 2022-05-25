@@ -1,0 +1,7 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/util-types/src",
+  "prefix": "app",
+  "targets": {},
+  "tags": []
+}

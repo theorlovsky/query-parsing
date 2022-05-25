@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { ExampleComponent } from '@app/feature-example';
 
 import { AppComponent } from './app.component';
 
@@ -8,7 +9,15 @@ import { AppComponent } from './app.component';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
+    RouterModule.forRoot(
+      [
+        {
+          path: '',
+          component: ExampleComponent,
+        },
+      ],
+      { initialNavigation: 'enabledBlocking' },
+    ),
   ],
   providers: [],
   bootstrap: [AppComponent],

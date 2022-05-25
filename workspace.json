@@ -2,7 +2,10 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "feature-example": "libs/feature-example",
     "query-parsing": "apps/query-parsing",
-    "util-query-params": "libs/util-query-params"
+    "state-example": "libs/state-example",
+    "util-query-params": "libs/util-query-params",
+    "util-types": "libs/util-types"
   }
 }

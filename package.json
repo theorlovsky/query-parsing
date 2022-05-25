@@ -6,10 +6,28 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postinstall": "ngcc --properties es2015 browser module main"
   },
   "private": true,
+  "dependencies": {
+    "@angular/animations": "13.3.9",
+    "@angular/common": "13.3.9",
+    "@angular/compiler": "13.3.9",
+    "@angular/core": "13.3.9",
+    "@angular/forms": "13.3.9",
+    "@angular/platform-browser": "13.3.9",
+    "@angular/platform-browser-dynamic": "13.3.9",
+    "@angular/router": "13.3.9",
+    "rxjs": "7.4.0",
+    "tslib": "2.4.0",
+    "zone.js": "0.11.5"
+  },
   "devDependencies": {
+    "@angular-devkit/build-angular": "13.3.6",
+    "@angular/cli": "13.3.6",
+    "@angular/compiler-cli": "13.3.9",
+    "@angular/language-service": "13.3.9",
     "@nrwl/angular": "14.1.9",
     "@nrwl/cli": "14.1.9",
     "@nrwl/workspace": "14.1.9",

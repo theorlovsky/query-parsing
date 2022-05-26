@@ -1,0 +1,24 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/util-fns/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/util-fns"],
+      "options": {
+        "project": "libs/util-fns/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/util-fns/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/util-fns/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    }
+  },
+  "tags": []
+}

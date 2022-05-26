@@ -5,6 +5,8 @@
     "feature-example": "libs/feature-example",
     "query-parsing": "apps/query-parsing",
     "state-example": "libs/state-example",
+    "util-fns": "libs/util-fns",
+    "util-parsers": "libs/util-parsers",
     "util-query-params": "libs/util-query-params",
     "util-types": "libs/util-types"
   }

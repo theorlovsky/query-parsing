@@ -23,6 +23,7 @@
     "@ngneat/elf": "2.0.0",
     "@ngneat/elf-cli-ng": "1.0.0",
     "@ngneat/elf-devtools": "1.2.1",
+    "lodash-es": "4.17.21",
     "rxjs": "7.4.0",
     "tslib": "2.4.0",
     "zone.js": "0.11.5"
@@ -36,6 +37,8 @@
     "@nrwl/cli": "14.1.9",
     "@nrwl/cypress": "14.1.9",
     "@nrwl/workspace": "14.1.9",
+    "@types/lodash": "4.14.182",
+    "@types/lodash-es": "4.17.6",
     "@types/node": "16.11.7",
     "cypress": "9.7.0",
     "husky": "8.0.1",

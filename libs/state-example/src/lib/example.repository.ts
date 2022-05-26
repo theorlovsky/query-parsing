@@ -6,7 +6,10 @@ export interface ExampleProps {
   count: number;
   enabled?: boolean;
   filters?: {
-    from: string;
+    date?: {
+      from: string;
+      to: string;
+    };
   };
 }
 

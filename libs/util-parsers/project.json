@@ -1,0 +1,24 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/util-parsers/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/util-parsers"],
+      "options": {
+        "project": "libs/util-parsers/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/util-parsers/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/util-parsers/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    }
+  },
+  "tags": []
+}

@@ -3,7 +3,7 @@ import { Parser } from '@app/util-parsers';
 import { DeepPartial, SimpleObject } from '@app/util-types';
 import { ParserMap } from './types';
 
-export function parseQueryParams<T extends SimpleObject>(
+export function fromQueryParams<T extends SimpleObject>(
   params: Params,
   parsers: ParserMap<T>,
 ): DeepPartial<T> {
@@ -18,7 +18,7 @@ export function parseQueryParams<T extends SimpleObject>(
         typeof parser === 'function'
           ? parser(param)
           : param
-          ? parseQueryParams<T[typeof key]>(
+          ? fromQueryParams<T[typeof key]>(
               typeof param === 'string' ? JSON.parse(param) : param,
               parser,
             )

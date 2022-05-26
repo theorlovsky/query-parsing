@@ -7,25 +7,17 @@ import { toQueryParams } from '@app/util-query-params';
 @Component({
   selector: 'app-example',
   template: `
-    <div>
-      <h3>Props:</h3>
-      <pre>{{ props$ | async | json }}</pre>
-    </div>
-    <div>
-      <button type="button" (click)="writeQueryParams()">
-        Write query params
-      </button>
-      <button type="button" (click)="clearQueryParams()">
-        Clear query params
-      </button>
-      <button type="button" (click)="reloadPage()">Reload page</button>
-    </div>
+    <button type="button" (click)="writeQueryParams()">
+      Write query params
+    </button>
+    <button type="button" (click)="clearQueryParams()">
+      Clear query params
+    </button>
+    <button type="button" (click)="reloadPage()">Reload page</button>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ExampleComponent {
-  readonly props$ = this.exampleRepository.props$;
-
   constructor(
     private readonly route: ActivatedRoute,
     private readonly exampleRepository: ExampleRepository,
@@ -37,7 +29,6 @@ export class ExampleComponent {
   async writeQueryParams(): Promise<void> {
     await this.router.navigate(['./'], {
       relativeTo: this.route,
-      /** play with it */
       queryParams: toQueryParams(this.exampleRepository.testQueryParams, {
         filters: (filters) => JSON.stringify(filters),
       }),

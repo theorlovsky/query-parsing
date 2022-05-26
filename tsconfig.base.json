@@ -20,6 +20,7 @@
       "@app/util-fns": ["libs/util-fns/src/index.ts"],
       "@app/util-parsers": ["libs/util-parsers/src/index.ts"],
       "@app/util-query-params": ["libs/util-query-params/src/index.ts"],
+      "@app/util-store": ["libs/util-store/src/index.ts"],
       "@app/util-types": ["libs/util-types/src/index.ts"]
     }
   },

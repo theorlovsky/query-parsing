@@ -64,6 +64,7 @@ export class ExampleRepository {
   setFromQueryParams(params: Params): void {
     this.store.update(
       setFromQueryParams(params, this.parsers, this.defaultProps),
+      // setFiltersFromQueryParams(params, {date: {to: () => 2}}),
     );
   }
 

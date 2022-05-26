@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Params } from '@angular/router';
 import { merge, print } from '@app/util-fns';
-import { numberParser } from '@app/util-parsers';
+import { booleanParser, numberParser } from '@app/util-parsers';
 import { fromQueryParams, ParserMap } from '@app/util-query-params';
 import { DeepPartial } from '@app/util-types';
 import { createStore, withProps } from '@ngneat/elf';
@@ -50,12 +50,7 @@ export class ExampleRepository {
     this.parsers = {
       test: (value) => (typeof value === 'string' ? value : null),
       count: numberParser,
-      enabled: (value) =>
-        typeof value === 'boolean'
-          ? value
-          : typeof value === 'string'
-          ? JSON.parse(value)
-          : null,
+      enabled: booleanParser,
       filters: {
         date: {
           from: (value) => (typeof value === 'string' ? value : null),
